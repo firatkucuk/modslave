@@ -1,0 +1,5 @@
+- Basic write operations
+- MODBUS exceptions
+- Allow config file as parameter
+- Unit test needed
+- Multiple data type support float, integer, signed integer
