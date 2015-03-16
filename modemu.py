@@ -60,7 +60,7 @@ def inject_config():
 
 if __name__ == "__main__":
 
-    config  = json.load(open('emulator.json'))
+    config  = json.load(open('modemu.json'))
     host    = config["listenAddress"]
     port    = config["listenPort"]
     backlog = 5
