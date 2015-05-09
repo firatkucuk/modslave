@@ -4,18 +4,7 @@
 # [dependencies] #######################################################################################################
 
 import byte_utils
-
-
-# [globals] ############################################################################################################
-
-FUNC_01_READ_COIL_STATUS          = 1
-FUNC_02_READ_INPUT_STATUS         = 2
-FUNC_03_READ_HOLDING_REGISTERS    = 3
-FUNC_04_READ_INPUT_REGISTERS      = 4
-FUNC_05_FORCE_SINGLE_COIL         = 5
-FUNC_06_PRESET_SINGLE_REGISTER    = 6
-FUNC_15_FORCE_MULTIPLE_COILS      = 15
-FUNC_16_PRESET_MULTIPLE_REGISTERS = 16
+import globals as g
 
 
 # [Response] ###########################################################################################################
@@ -32,13 +21,13 @@ class Response:
 
         self.create_mbap_header()
 
-        if request.function_code == FUNC_01_READ_COIL_STATUS:
+        if request.function_code == g.FUNC_01_READ_COIL_STATUS:
             self.create_pdu_fc01()
-        elif request.function_code == FUNC_02_READ_INPUT_STATUS:
+        elif request.function_code == g.FUNC_02_READ_INPUT_STATUS:
             self.create_pdu_fc02()
-        elif request.function_code == FUNC_03_READ_HOLDING_REGISTERS:
+        elif request.function_code == g.FUNC_03_READ_HOLDING_REGISTERS:
             self.create_pdu_fc03()
-        elif request.function_code == FUNC_04_READ_INPUT_REGISTERS:
+        elif request.function_code == g.FUNC_04_READ_INPUT_REGISTERS:
             self.create_pdu_fc04()
 
     # [create_mbap_header] ---------------------------------------------------------------------------------------------
